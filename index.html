@@ -148,7 +148,7 @@ a{color:#162f7f}a:hover{color:#0f2260}
 .switch .knob{width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.25);transition:transform .15s}
 .switch.is-on{background:#162f7f}
 .switch.is-on .knob{transform:translateX(28px)}
-.rowq{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.rowq{display:flex;justify-content:flex-start;align-items:center;gap:12px 28px;flex-wrap:wrap}
 .dd-btn{height:52px;width:100%;border:1px solid #c9c9c9;border-radius:10px;background:#fff;padding:0 8px 0 14px;display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:15px;color:#1b1b2f;text-align:left}
 .dd-btn .ph{color:#686868}
 .chev{width:34px;height:34px;border-radius:50%;background:#f0f2f7;display:flex;align-items:center;justify-content:center;color:#242424;flex:none}
@@ -602,7 +602,7 @@ a{color:#162f7f}a:hover{color:#0f2260}
       </div>
 
       <div class="rowq">
-        <span class="flabel" id="lbl-rep" style="max-width: 680px">Is this a request to replace your existing SPN with New Managed Identity Authentication?<span class="req">*</span></span>
+        <span class="flabel" id="lbl-rep">Is this a request to replace your existing SPN with New Managed Identity Authentication?<span class="req">*</span></span>
         <div class="tgl"><span class="{{tg.repNo}}">No</span><button class="{{tg.rep}}" role="switch" aria-checked="{{f.replaceSpn}}" aria-labelledby="lbl-rep" onClick="{{h.toggleRep}}"><span class="knob"></span></button><span class="{{tg.repYes}}">Yes</span></div>
       </div>
 
