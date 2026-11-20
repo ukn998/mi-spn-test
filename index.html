@@ -1186,7 +1186,7 @@ class Component extends DCLogic {
       screen: 'home', step: 0, maxStep: 0, homeTab: 'issue',
       dashMode: 'access', dashType: 'mispn', dashFilter: 'all', sortKey: 'date', sortDir: 'asc',
       apSearch: '', approvals: seedApprovals(level !== undefined), form: seedForm(level || 0),
-      showErr: { 0: false, 1: false, 2: false }, bjOpen: {}, openDD: '', reviewSec: 0,
+      showErr: { 0: false, 1: false, 2: false }, bjOpen: { problem: true }, openDD: '', reviewSec: 0,
       modal: null, toast: '', access: seedAccess(), requests: seedRequests(),
       view: null, banner: false, nextId: 10512, lastId: '', renewing: ''
     };
@@ -1291,7 +1291,7 @@ class Component extends DCLogic {
   startForm(renewName) {
     const f = seedForm(0);
     if (renewName) f.identity = renewName;
-    this.go('form', { step: 0, maxStep: 0, form: f, approvals: seedApprovals(false), showErr: { 0: false, 1: false, 2: false }, reviewSec: 0, apSearch: '', renewing: renewName || '' });
+    this.go('form', { step: 0, maxStep: 0, form: f, approvals: seedApprovals(false), showErr: { 0: false, 1: false, 2: false }, bjOpen: { problem: true }, reviewSec: 0, apSearch: '', renewing: renewName || '' });
     if (renewName) this.flash('Renewing ' + renewName + ' — what we know is already filled in.');
   }
 
